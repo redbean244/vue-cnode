@@ -1,21 +1,26 @@
 <template>
   <div id="app">
     <Header></Header>
+    <div class="main">
+        <Postlist></Postlist>
+    </div> 
   </div>
 </template>
 
 <script>
   import Header from './components/Header'
+  import Postlist from './components/Postlist'
   export default {
     name: 'App',
     components: {
-      Header
+      Header,Postlist
     }
   }
 </script>
 
 <style>
-#app {
-  
+.main {
+  width: 80%;
+  margin: 0 auto;
 }
 </style>
