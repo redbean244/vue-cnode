@@ -4,7 +4,7 @@
         <div class="loading" v-if="isLoading">
             <img src="../assets/loading.gif" alt="">
         </div>
-        <div class="posts">
+        <div class="posts" v-else>
             <ul>
                 <li>
                     <div class="toobar">
@@ -29,9 +29,16 @@
                         {{post | tabFormatter}}
                     </span>
                     <!-- 标题 -->
-                    <span>
-                        {{post.title}}
-                    </span>
+                    <router-link :to="{
+                        name:'post_content',
+                        params:{
+                            id:post.id,
+                            name:post.author.loginname 
+                        }}"> 
+                        <span>
+                            {{post.title}}
+                        </span>
+                    </router-link>                    
                     <!-- 最终回复时间 -->
                     <span class="last_reply">
                         {{post.last_reply_at | formatDate}}
