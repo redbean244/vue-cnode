@@ -21,10 +21,10 @@
         <div v-for="(reply,index)  in post.replies" :key="index" class="replySec">
           <div class="replyUp">
             <router-link :to="{
-            name:'user_info',
-            params:{
-              name:reply.author.loginname
-            }
+                name:'user_info',
+                params:{
+                  name:reply.author.loginname
+                }
             }">
               <img :src="reply.author.avatar_url" alt="">
             </router-link>
@@ -79,7 +79,12 @@
         },
         beforeMount() {           
           this.getArticleData();
-        }       
+        },
+        watch: {
+          '$route'(to,from){
+            this.getArticleData();
+          }
+        },       
     }
     
 </script>
