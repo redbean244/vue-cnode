@@ -19,7 +19,7 @@
          
 ​		     1)Header头部组件 2）Postlist列表组件 3）Article文章的详情页组件
 
-  		   4）Userinfo用户个人信息组件 5）Slidebar侧边栏组件 6）Pagination分页组件
+  		     4)Userinfo用户个人信息组件 5)Slidebar侧边栏组件 6)Pagination分页组件
 
 项目技术：项目调用cnode官方社区提供的API获取文章、用户头像等数据 
 
